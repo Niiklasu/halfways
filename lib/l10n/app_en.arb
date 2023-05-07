@@ -1,0 +1,29 @@
+{
+  "appTitle": "Halfways",
+  "mainPage": "Main Page",
+  "meetUp": "Meet Up!",
+  "firstHint": "First Address...",
+  "secondHint": "Second Address...",
+  "halfwaysBetween": "Halfways between {placeOne} and {placeTwo}",
+  "@halfwaysBetween": {
+    "placeholders": {
+      "placeOne": {},
+      "placeTwo": {}
+    }
+  },
+  "contact": "Contact",
+  "disclaimerTitle": "Disclaimer",
+  "disclaimerText": "Please note that this app was created as a university project. While I have taken all reasonable efforts to ensure the accuracy and completeness of the information provided in the app, I cannot guarantee that it is entirely free from errors or omissions.",
+  "feedbackTitle": "Feedback",
+  "feedbackText": "I value your feedback! If you have any questions, suggestions for improvements, or would like to donate to support the development, please don't hesitate to reach out. Any support to keep this app running is appreciated.",
+  "imprint": "Imprint",
+  "settings": "Settings",
+  "language": "Language",
+  "english": "English",
+  "german": "German",
+  "help": "Help",
+  "howToTitle": "How to use this app?",
+  "howToText": "First you choose your mode of transportation by selection one from the available buttons on top.\n\nAfterwards you enter the two starting points. This can be an actual address, area or anything else.'\n\nYou're almost done! Press the button on the bottom to get the results. You will see the optimal route for your mode of transportation and the midpoint between the two starting points.\n\nAditionally an list of nearby points of interest are displayed. You can share the link to your place of choice and meet up!",
+  "phone": "Phone",
+  "email": "Email"
+}

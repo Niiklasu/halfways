@@ -1,0 +1,23 @@
+{
+  "appTitle": "Halfways",
+  "mainPage": "Startseite",
+  "meetUp": "Treffen!",
+  "firstHint": "Erste Adresse...",
+  "secondHint": "Zweite Adresse...",
+  "halfwaysBetween": "In der Mitte von {placeOne} und {placeTwo}",
+  "contact": "Kontakt",
+  "disclaimerTitle": "Disclaimer",
+  "disclaimerText": "Bitte beachte, dass diese App im Rahmen eines Universitätsprojekts erstellt wurde. Ich habe mein Bestes gegeben, um die Informationen in der App so genau und vollständig wie möglich zu gestalten. Allerdings kann ich nicht garantieren, dass sie absolut fehlerfrei oder vollständig sind.",
+  "feedbackTitle": "Feedback",
+  "feedbackText": "Ich würde mich sehr über dein Feedback freuen! Falls du Fragen hast, Verbesserungsvorschläge machen möchtest oder mich mit einer Spende unterstützen möchtest, melde dich einfach bei mir. Ich freue mich über jede Unterstützung, um diese App am Laufen zu halten.",
+  "imprint": "Impressum",
+  "settings": "Einstellungen",
+  "language": "Sprache",
+  "english": "Englisch",
+  "german": "Deutsch",
+  "help": "Hilfe",
+  "howToTitle": "Anleitung",
+  "howToText": "Als erstes wählst du das Verkehrsmittel deiner Wahl aus der Lise aus.\n\nDanach gibst du die zwei Startadressen ein. Dies kann eine richtige Adresse, ein Ort oder alles andere sein.\n\nFast geschafft! Drücke nun auf den Knopf unten um zu den Ergebnissen zu kommen. Auf der Karte siehst due die beste Route zwischen den Startpunkten für dein Verkehrsmittel und die Mitte der Strecke.\n\nZusätzlich werden dir interessante Orte in der Umgebung angezeigt. Du kannst einen Link zu dem Ort deiner Wahl teilen und schon bist du breit dich zu treffen!",
+  "phone": "Tel",
+  "email": "E-Mail"
+}
