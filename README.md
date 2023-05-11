@@ -11,7 +11,6 @@ Halfways is created using:
 - Google Maps API
 
 ## Future Plans
-- Allow user to select their current location.
 - Include images and reviews for the reccomendation.
 - Add support for public transit.
 - Add support for more languages.

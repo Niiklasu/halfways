@@ -74,7 +74,7 @@ class _RoutePageState extends State<RoutePage> {
                     ),
                     Container(
                       color: constants.buttonBG,
-                      height: statusHeight + 70,
+                      height: statusHeight + 80,
                       child: Column(
                         children: [
                           SizedBox(
@@ -82,7 +82,7 @@ class _RoutePageState extends State<RoutePage> {
                           ),
                           Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
                             Expanded(
-                              flex: 20,
+                              flex: 15,
                               child: IconButton(
                                 onPressed: () {
                                   Navigator.pop(context);
@@ -95,7 +95,7 @@ class _RoutePageState extends State<RoutePage> {
                               ),
                             ),
                             Expanded(
-                              flex: 60,
+                              flex: 70,
                               child: Text(
                                 translation(context).halfwaysBetween(
                                     widget.firstPlace.name, widget.secondPlace.name),
@@ -106,7 +106,7 @@ class _RoutePageState extends State<RoutePage> {
                                     color: constants.text),
                               ),
                             ),
-                            const Spacer(flex: 20)
+                            const Spacer(flex: 15)
                           ]),
                         ],
                       ),

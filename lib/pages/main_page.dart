@@ -127,32 +127,32 @@ class _MyHomePageState extends State<MyHomePage> {
                 _controllerSecond, translation(context).secondHint, _secondPlace),
             const Spacer(flex: 30),
             ElevatedButton(
-              // onPressed: (_firstPlace.id != '' && _secondPlace.id != '')
-              // ? () {
-              //     Navigator.push(
-              //       context,
-              //       MaterialPageRoute(
-              //         builder: (context) => RoutePage(
-              //           firstPlace: _firstPlace,
-              //           secondPlace: _secondPlace,
-              //           mode: _modes[_selectedMode],
-              //         ),
-              //       ),
-              //     );
-              //   }
-              // : null,
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => RoutePage(
-                            firstPlace: Place('place_id:ChIJIaGfee8tw4ARM6nKAHCUCVI', 'Pomona'),
-                            secondPlace:
-                                Place('place_id:ChIJWdeZQOjKwoARqo8qxPo6AKE', 'Long Beach'),
+              onPressed: (_firstPlace.id != '' && _secondPlace.id != '')
+                  ? () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => RoutePage(
+                            firstPlace: _firstPlace,
+                            secondPlace: _secondPlace,
                             mode: _modes[_selectedMode],
-                          )),
-                );
-              },
+                          ),
+                        ),
+                      );
+                    }
+                  : null,
+              // onPressed: () {
+              //   Navigator.push(
+              //     context,
+              //     MaterialPageRoute(
+              //         builder: (context) => RoutePage(
+              //               firstPlace: Place('place_id:ChIJIaGfee8tw4ARM6nKAHCUCVI', 'Pomona'),
+              //               secondPlace:
+              //                   Place('place_id:ChIJWdeZQOjKwoARqo8qxPo6AKE', 'Long Beach'),
+              //               mode: _modes[_selectedMode],
+              //             )),
+              //   );
+              // },
               style: ElevatedButton.styleFrom(
                 backgroundColor: constants.buttonBG,
                 foregroundColor: constants.accentColor,
