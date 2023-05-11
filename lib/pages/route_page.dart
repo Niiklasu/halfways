@@ -4,11 +4,12 @@ import 'dart:math' show cos, sqrt, asin;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_native_splash/cli_commands.dart';
 import 'package:halfways/language_constants.dart';
-import '../google_api.dart';
+import '../helpers/google_api.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import '../constants.dart' as constants;
+import '../helpers/constants.dart' as constants;
 import 'main_page.dart';
 
 class RoutePage extends StatefulWidget {
@@ -46,49 +47,14 @@ class _RoutePageState extends State<RoutePage> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    // double height = MediaQuery.of(context).size.height;
+    double statusHeight = MediaQuery.of(context).viewPadding.top;
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: constants.accentColor,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          const Spacer(flex: 3),
           Expanded(
-            flex: 17,
-            child: Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
-              Expanded(
-                flex: 20,
-                child: CircleAvatar(
-                  radius: 20,
-                  backgroundColor: Colors.white,
-                  child: IconButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    padding: EdgeInsets.zero,
-                    icon: const Icon(
-                      Icons.arrow_back,
-                      color: Colors.black,
-                    ),
-                  ),
-                ),
-              ),
-              Expanded(
-                flex: 60,
-                child: Text(
-                  translation(context)
-                      .halfwaysBetween(widget.firstPlace.name, widget.secondPlace.name),
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                ),
-                // TODO make top banner pretty
-              ),
-              const Spacer(flex: 20)
-            ]),
-          ),
-          Expanded(
-            flex: 80,
             child: FutureBuilder(
               future: futureLocations,
               builder: (context, AsyncSnapshot snapshot) {
@@ -104,6 +70,45 @@ class _RoutePageState extends State<RoutePage> {
                         zoomControlsEnabled: false,
                         polylines: _polylines,
                         markers: {..._markers},
+                      ),
+                    ),
+                    Container(
+                      color: constants.buttonBG,
+                      height: statusHeight + 70,
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: statusHeight,
+                          ),
+                          Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+                            Expanded(
+                              flex: 20,
+                              child: IconButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                padding: EdgeInsets.zero,
+                                icon: const Icon(
+                                  Icons.arrow_back,
+                                  color: constants.text,
+                                ),
+                              ),
+                            ),
+                            Expanded(
+                              flex: 60,
+                              child: Text(
+                                translation(context).halfwaysBetween(
+                                    widget.firstPlace.name, widget.secondPlace.name),
+                                textAlign: TextAlign.center,
+                                style: const TextStyle(
+                                    fontSize: 22,
+                                    fontWeight: FontWeight.bold,
+                                    color: constants.text),
+                              ),
+                            ),
+                            const Spacer(flex: 20)
+                          ]),
+                        ],
                       ),
                     ),
                     Align(
@@ -140,7 +145,7 @@ class _RoutePageState extends State<RoutePage> {
                               child: Container(
                                 decoration: const BoxDecoration(
                                   borderRadius: BorderRadius.all(Radius.circular(20)),
-                                  color: Colors.white,
+                                  color: constants.fill,
                                 ),
                                 width: MediaQuery.of(context).size.width - 75,
                                 child: Container(
@@ -156,7 +161,7 @@ class _RoutePageState extends State<RoutePage> {
                                           Text(
                                             locations[index].rating.toString(),
                                             style: const TextStyle(
-                                                fontSize: 12, color: constants.mainHint),
+                                                fontSize: 12, color: constants.hint),
                                           ),
                                           const SizedBox(width: 5),
                                           Row(
@@ -177,13 +182,14 @@ class _RoutePageState extends State<RoutePage> {
                                           Text(
                                             '(${locations[index].reviews})',
                                             style: const TextStyle(
-                                                fontSize: 12, color: constants.mainHint),
+                                                fontSize: 12, color: constants.hint),
                                           ),
                                         ]),
                                         const SizedBox(height: 5),
-                                        Text(locations[index].type, // TODO refactor this string
+                                        Text(
+                                            locations[index].type.replaceAll('_', ' ').capitalize(),
                                             style: const TextStyle(
-                                                fontSize: 12, color: constants.mainHint)),
+                                                fontSize: 12, color: constants.hint)),
                                         const Divider(
                                           thickness: 1,
                                         ),
@@ -219,7 +225,7 @@ class _RoutePageState extends State<RoutePage> {
                                                 padding: EdgeInsets.zero,
                                                 icon: const Icon(
                                                   Icons.share,
-                                                  color: Colors.white,
+                                                  color: constants.fill,
                                                 ),
                                               ),
                                             ),

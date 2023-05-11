@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:halfways/constants.dart' as constants;
+import 'package:halfways/helpers/constants.dart' as constants;
 import 'package:halfways/language_constants.dart';
 import 'package:halfways/pages/language_page.dart';
 
-import '../helper.dart';
+import '../helpers/drawer.dart';
 import '../language.dart';
 
 class SettingsPage extends StatelessWidget {
@@ -15,6 +15,7 @@ class SettingsPage extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       backgroundColor: constants.mainBG,
       appBar: AppBar(
+        iconTheme: const IconThemeData(color: constants.text),
         toolbarHeight: 65,
         title: Text(
           translation(context).settings,
@@ -37,12 +38,12 @@ class SettingsPage extends StatelessWidget {
               Navigator.push(
                   context, MaterialPageRoute(builder: (context) => const LanguagePage()));
             },
-            tileColor: constants.mainHint,
+            tileColor: constants.hint,
             title: Row(
               children: [
                 Text(
                   translation(context).language,
-                  style: const TextStyle(color: constants.mainText, fontSize: 18),
+                  style: const TextStyle(color: constants.text, fontSize: 18),
                 ),
                 const Spacer(),
                 FutureBuilder(

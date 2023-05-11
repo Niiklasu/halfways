@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:halfways/constants.dart' as constants;
+import 'package:halfways/helpers/constants.dart' as constants;
 import 'package:halfways/language_constants.dart';
 
-import '../helper.dart';
+import '../helpers/drawer.dart';
 
 class HelpPage extends StatelessWidget {
   const HelpPage({super.key});
@@ -13,6 +13,7 @@ class HelpPage extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       backgroundColor: constants.mainBG,
       appBar: AppBar(
+        iconTheme: const IconThemeData(color: constants.text),
         toolbarHeight: 65,
         title: Text(
           translation(context).help,
@@ -33,13 +34,13 @@ class HelpPage extends StatelessWidget {
           children: [
             Text(
               translation(context).howToTitle,
-              style: const TextStyle(
-                  color: constants.mainText, fontSize: 18, fontWeight: FontWeight.w600),
+              style:
+                  const TextStyle(color: constants.text, fontSize: 18, fontWeight: FontWeight.w600),
             ),
             const SizedBox(height: 10),
             Text(
               translation(context).howToText,
-              style: const TextStyle(color: constants.mainText, fontSize: 16),
+              style: const TextStyle(color: constants.text, fontSize: 16),
             ),
           ],
         ),

@@ -41,12 +41,12 @@ Widget createDrawer(BuildContext context, int position) {
             itemCount: pages.length,
             itemBuilder: (BuildContext context, int index) => ListTile(
                 splashColor: Colors.transparent,
-                leading: Icon(pages[index][1], color: constants.mainText),
+                leading: Icon(pages[index][1], color: constants.text),
                 title: Text(
                   pages[index][0],
-                  style: const TextStyle(fontSize: 20, color: constants.mainText),
+                  style: const TextStyle(fontSize: 20, color: constants.text),
                 ),
-                tileColor: index == position ? constants.mainHint : null,
+                tileColor: index == position ? constants.hint : null,
                 onTap: () {
                   Navigator.pop(context);
                   if (ModalRoute.of(context)!.settings.name != pages[index][2]) {
@@ -65,7 +65,7 @@ Widget createDrawer(BuildContext context, int position) {
                     alignment: Alignment.bottomCenter,
                     child: Text(
                       'Version: ${snapshot.data!.version}',
-                      style: const TextStyle(color: constants.mainText),
+                      style: const TextStyle(color: constants.text),
                     ),
                   ),
                 );

@@ -25,5 +25,6 @@
   "howToTitle": "How to use this app?",
   "howToText": "First you choose your mode of transportation by selection one from the available buttons on top.\n\nAfterwards you enter the two starting points. This can be an actual address, area or anything else.'\n\nYou're almost done! Press the button on the bottom to get the results. You will see the optimal route for your mode of transportation and the midpoint between the two starting points.\n\nAditionally an list of nearby points of interest are displayed. You can share the link to your place of choice and meet up!",
   "phone": "Phone",
-  "email": "Email"
+  "email": "Email",
+  "yourLocation": "Your location"
 }

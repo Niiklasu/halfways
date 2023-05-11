@@ -1,4 +1,4 @@
-import 'package:halfways/constants.dart' as constants;
+import 'package:halfways/helpers/constants.dart' as constants;
 import 'package:flutter/material.dart';
 import 'package:halfways/language.dart';
 import 'package:halfways/language_constants.dart';
@@ -41,9 +41,9 @@ class LanguagePage extends StatelessWidget {
               },
               title: Text(
                 languageList[index].name,
-                style: const TextStyle(color: constants.mainText, fontSize: 18),
+                style: const TextStyle(color: constants.text, fontSize: 18),
               ),
-              tileColor: constants.mainHint,
+              tileColor: constants.hint,
             );
           },
         ));

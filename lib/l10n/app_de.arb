@@ -19,5 +19,6 @@
   "howToTitle": "Anleitung",
   "howToText": "Als erstes wählst du das Verkehrsmittel deiner Wahl aus der Lise aus.\n\nDanach gibst du die zwei Startadressen ein. Dies kann eine richtige Adresse, ein Ort oder alles andere sein.\n\nFast geschafft! Drücke nun auf den Knopf unten um zu den Ergebnissen zu kommen. Auf der Karte siehst due die beste Route zwischen den Startpunkten für dein Verkehrsmittel und die Mitte der Strecke.\n\nZusätzlich werden dir interessante Orte in der Umgebung angezeigt. Du kannst einen Link zu dem Ort deiner Wahl teilen und schon bist du breit dich zu treffen!",
   "phone": "Tel",
-  "email": "E-Mail"
+  "email": "E-Mail",
+  "yourLocation": "Mein Standort"
 }

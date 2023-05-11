@@ -3,8 +3,10 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:halfways/pages/contact_page.dart';
 import 'package:halfways/pages/help_page.dart';
 import 'package:halfways/pages/settings_page.dart';
+import 'helpers/material_color.dart';
 import 'language_constants.dart';
 import 'pages/main_page.dart';
+import 'helpers/constants.dart' as constants;
 
 void main() {
   runApp(const MyApp());
@@ -43,7 +45,7 @@ class _MyAppState extends State<MyApp> {
       title: 'Halfways',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: MaterialColorGenerator.from(constants.accentColor),
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,

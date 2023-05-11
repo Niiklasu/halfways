@@ -171,6 +171,7 @@ class GoogleApiProvider {
   }
 
   Future<List<Location>> fetchLocations(LatLng location) async {
+    debugPrint('*****LOCATION CALL');
     final uri = Uri(
         scheme: 'https',
         host: 'maps.googleapis.com',
@@ -209,13 +210,14 @@ class GoogleApiProvider {
   }
 
   Future<RouteResponse> fetchRoute(String originId, String destinationId, String mode) async {
+    debugPrint('*****ROUTE CALL');
     final uri = Uri(
         scheme: 'https',
         host: 'maps.googleapis.com',
         path: 'maps/api/directions/json',
         queryParameters: {
-          'origin': 'place_id:$originId',
-          'destination': 'place_id:$destinationId',
+          'origin': originId,
+          'destination': destinationId,
           // 'language': lang, Unconcoment once app allows for different languages
           'key': _apiKey,
           'mode': mode,
